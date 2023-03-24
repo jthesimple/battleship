@@ -1,17 +1,17 @@
 
 
-const shipFactory = (length, hitCounter, sunk) =>{
+const Ship = (length, hitCounter, sunk) =>{
 
     const hit = (ship) => {
         ship.hitCounter++;
         return ship.hitCounter;
     };
 
-    const isSunk = () => {
-        if (length === hitCounter){
-            sunk = console.log('Yes');
+    const isSunk = (ship) => {
+        if (ship.length === ship.hitCounter){
+            ship.sunk = 'Yes'
         } else {
-            sunk = 'No'
+            ship.sunk = 'No'
         };
 
     };
@@ -20,7 +20,11 @@ const shipFactory = (length, hitCounter, sunk) =>{
 
 };
 
-const carrier = shipFactory(5, 0, 'no');
-carrier.hit(carrier);
-console.log(carrier.hitCounter);
+const Gameboard = () => {
+
+
+
+};
+
+
 
